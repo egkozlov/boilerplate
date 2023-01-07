@@ -1,24 +1,14 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react';
+import { Card } from './Card';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export const App = () => (
+  <div className="App">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+      <Card user={{ fullName: 'Yegor Kozlov', role: 'Husband' }} />
+      <Card user={{ fullName: 'Margarita Kozlova', role: 'Wife' }} />
+      <Card user={{ fullName: 'Kiso Kozlov-Yakubousky', role: 'Pet' }} />
     </div>
-  );
-}
-
-export default App;
+  </div>
+);
