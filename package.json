@@ -29,8 +29,9 @@
   },
   "lint-staged": {
     "*.ts|*.tsx": [
-      "npm run lint:eslint:fix",
-      "prettier --write ."
+      "npm run lint:fix",
+      "prettier --write .",
+      "git add --force"
     ]
   },
   "browserslist": {
