@@ -5,6 +5,8 @@ import './App.css';
 
 export const App = () => (
   <div className="App">
+
+
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
       <Card user={{ fullName: 'Yegor Kozlov', role: 'Husband' }} />
       <Card user={{ fullName: 'Margarita Kozlova', role: 'Wife' }} />
