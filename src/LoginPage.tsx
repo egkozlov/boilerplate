@@ -1,3 +1,4 @@
+import { Flex, Button, Card, CardBody, Heading } from '@chakra-ui/react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
 
@@ -13,9 +14,13 @@ export const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <button onClick={onLoginClick}>Signin</button>
-    </div>
+    <Flex m="0 auto" width="500px" mt="40">
+      <Card width="full">
+        <CardBody>
+          <Heading>Login</Heading>
+          <Button onClick={onLoginClick}>Signin</Button>
+        </CardBody>
+      </Card>
+    </Flex>
   );
 };
