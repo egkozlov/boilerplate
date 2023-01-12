@@ -1,7 +1,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import { ErrorPage } from './ErrorPage';
 import { Home } from './Home';
-import { LoginPage } from './LoginPage';
+import { RegisterPage } from './RegisterPage';
 import { RequireAuth } from './RequireAuth';
 
 export const router = createBrowserRouter(
@@ -16,7 +16,7 @@ export const router = createBrowserRouter(
         }
         errorElement={<ErrorPage />}
       />
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
     </>,
   ),
 );

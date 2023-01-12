@@ -1,3 +1,29 @@
 {
-  "welcomeMessage": "Welcome to React"
+  "welcomeMessage": "Welcome to React",
+  "registration": {
+    "title": "Create an account",
+    "submitButton": "Registration",
+    "form": {
+      "email": {
+        "label": "Email",
+        "errors": {
+          "required": "This field is required",
+          "invalid": "Email value is invalid"
+        }
+      },
+      "username": {
+        "label": "Username",
+        "errors": {
+          "required": "This field is required",
+          "minLength": "Minimum length should be 4"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "errors": {
+          "required": "This field is required"
+        }
+      }
+    }
+  }
 }

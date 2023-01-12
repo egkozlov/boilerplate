@@ -37,6 +37,7 @@ module.exports = {
     'import/no-default-export': 'error',
     'max-params': 'error',
     'newline-before-return': 'error',
+    'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': [
       'error',
       {
