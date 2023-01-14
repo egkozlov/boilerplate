@@ -29,6 +29,9 @@ export const RegisterPage = () => {
   const location = useLocation();
   const from = location.state?.from || '/';
 
+
+
+
   const {
     handleSubmit,
     register,
