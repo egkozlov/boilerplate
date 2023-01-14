@@ -1,9 +1,9 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import { ErrorPage } from './ErrorPage';
-import { Home } from './Home';
-import { LoginPage } from './auth/LoginPage';
-import { RegisterPage } from './auth/RegisterPage';
-import { RequireAuth } from './auth/RequireAuth';
+import { ErrorPage } from './pages/ErrorPage';
+import { Home } from '../Home';
+import { LoginPage } from '../auth/pages/LoginPage';
+import { RegisterPage } from '../auth/pages/RegisterPage';
+import { RequireAuth } from './guards/RequireAuth';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

@@ -13,7 +13,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from './useAuth';
+import { useAuth } from '../hooks/useAuth';
 
 type LoginForm = {
   username: string;
@@ -25,7 +25,7 @@ export const LoginPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from || '/';
 
   const {
     handleSubmit,
@@ -77,7 +77,7 @@ export const LoginPage = () => {
             <Trans
               i18nKey="login.registerHelper"
               components={{
-                RegisterLink: <Link as={RouterLink} color="blue" to="/register" />,
+                RegisterLink: <Link as={RouterLink} state={{ from }} color="blue" to="/register" />,
               }}
             />
           </Box>

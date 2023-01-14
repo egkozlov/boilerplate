@@ -13,9 +13,8 @@ import {
 import { useForm } from 'react-hook-form';
 import { Trans, useTranslation } from 'react-i18next';
 import { useLocation, useNavigate, Link as RouterLink } from 'react-router-dom';
-import { useAuth } from './useAuth';
-
-const isEmailInvalid = (value: string) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
+import { useAuth } from '../hooks/useAuth';
+import { isEmailInvalid } from '../utils';
 
 type RegistrationForm = {
   username: string;
@@ -28,7 +27,7 @@ export const RegisterPage = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from || '/';
 
   const {
     handleSubmit,
@@ -93,7 +92,7 @@ export const RegisterPage = () => {
             <Trans
               i18nKey="registration.loginHelper"
               components={{
-                LoginLink: <Link as={RouterLink} color="blue" to="/login" />,
+                LoginLink: <Link as={RouterLink} state={{ from }} color="blue" to="/login" />,
               }}
             />
           </Box>
