@@ -15,6 +15,11 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
 
+type LoginForm = {
+  username: string;
+  password: string;
+};
+
 export const LoginPage = () => {
   const { signin } = useAuth();
   const { t } = useTranslation();
@@ -26,9 +31,9 @@ export const LoginPage = () => {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<LoginForm>();
 
-  function onSubmit(values: any) {
+  function onSubmit(values: LoginForm) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(values);

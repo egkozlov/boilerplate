@@ -1,9 +1,9 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import { ErrorPage } from './ErrorPage';
 import { Home } from './Home';
-import { LoginPage } from './LoginPage';
-import { RegisterPage } from './RegisterPage';
-import { RequireAuth } from './RequireAuth';
+import { LoginPage } from './auth/LoginPage';
+import { RegisterPage } from './auth/RegisterPage';
+import { RequireAuth } from './auth/RequireAuth';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

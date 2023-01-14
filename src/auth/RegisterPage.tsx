@@ -17,6 +17,12 @@ import { useAuth } from './useAuth';
 
 const isEmailInvalid = (value: string) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
 
+type RegistrationForm = {
+  username: string;
+  email: string;
+  password: string;
+};
+
 export const RegisterPage = () => {
   const { signin } = useAuth();
   const { t } = useTranslation();
@@ -28,9 +34,9 @@ export const RegisterPage = () => {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
-  } = useForm();
+  } = useForm<RegistrationForm>();
 
-  function onSubmit(values: any) {
+  function onSubmit(values: RegistrationForm) {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(values);

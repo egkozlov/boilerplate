@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { RouterProvider } from 'react-router-dom';
 import { router } from './Router';
-import { AuthProvider } from './useAuth';
+import { AuthProvider } from './auth/useAuth';
 
 export const App = () => (
   <AuthProvider>
