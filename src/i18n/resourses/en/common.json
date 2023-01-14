@@ -3,6 +3,7 @@
   "registration": {
     "title": "Create an account",
     "submitButton": "Registration",
+    "loginHelper": "Already registered? <LoginLink>Sign in</LoginLink>",
     "form": {
       "email": {
         "label": "Email",
@@ -16,6 +17,25 @@
         "errors": {
           "required": "This field is required",
           "minLength": "Minimum length should be 4"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "errors": {
+          "required": "This field is required"
+        }
+      }
+    }
+  },
+  "login": {
+    "title": "Welcome!",
+    "submitButton": "Log in",
+    "registerHelper": "Not registered? <RegisterLink>Create account</RegisterLink>",
+    "form": {
+      "username": {
+        "label": "Username/Email",
+        "errors": {
+          "required": "This field is required"
         }
       },
       "password": {
