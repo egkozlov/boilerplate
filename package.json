@@ -33,7 +33,8 @@
     "prettier:check": "prettier --check .",
     "lint": "eslint --ignore-path .gitignore src",
     "lint:fix": "eslint --ignore-path .gitignore --fix src",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.ts|*.tsx": [
